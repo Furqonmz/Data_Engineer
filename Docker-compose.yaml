@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  postgres-db:
+    image: postgres:15
+    container_name: nexwave-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: nexwave_db
+      POSTGRES_USER: nexwave_user
+      POSTGRES_PASSWORD: nexwave_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
