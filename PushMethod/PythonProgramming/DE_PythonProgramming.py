@@ -34,17 +34,17 @@ class OrderProcessor:
 
 order1 = Order("001", "Furqon", "2026-09-15", 100000)
 order2 = Order("002", "Ahmad", "2026-09-16", 2000000)
-order3 = Order("003", "Bayu", "2026-09-17", 500000) 
+order3 = Order("003", "Bayu", "2026-09-17", 500000)
+order4 = Order("004", "Kak Rizky", "2026-09-27", 300000) 
 
 processor = OrderProcessor()
 
 processor.add_order(order1)
 processor.add_order(order2)
 processor.add_order(order3)
+processor.add_order(order4)
 
 order1.display_order()
-order2.display_order()
-order3.display_order()
 
 print(f"Total Revenue: {processor.calculate_total_revenue()}")
 print(f"Total Tax : {processor.calculate_total_tax()}")
